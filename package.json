@@ -1,5 +1,5 @@
 {
-  "name": "time-tracker-api",
+  "name": "mean-template",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/banjeremy/time-tracker.git"
+    "url": "https://github.com/banjeremy/mean-template.git"
   },
   "author": "banjeremy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/banjeremy/time-tracker/issues"
+    "url": "https://github.com/banjeremy/mean-template/issues"
   },
-  "homepage": "https://github.com/banjeremy/time-tracker",
+  "homepage": "https://github.com/banjeremy/mean-template",
   "devDependencies": {
     "chai": "^2.0.0",
     "gulp": "^3.8.11",
