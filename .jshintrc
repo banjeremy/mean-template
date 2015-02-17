@@ -15,6 +15,7 @@
   "unused": "vars",
   "strict": true,
 
+  "esnext": true,
   "node": true,
   "devel": true,
   "debug": true,
