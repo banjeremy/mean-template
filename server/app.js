@@ -5,7 +5,10 @@ var express    = require('express'),
     morgan     = require('morgan'),
     router     = require('./routes'),
     config     = require('./config'),
+    mongoose   = require('mongoose'),
     app        = express();
+
+mongoose.connect('mongodb://localhost/mean-template');
 
 var loggingProfile = (process.env.NODE_ENV === 'development') ? 'dev' : 'combined';
 
@@ -37,6 +40,7 @@ app.use(function(req, res, next) {
 // Error handling functions must have an arity of 4, i.e. 4 args. This is due to
 // connect which underlies express.
 app.use(function(err, req, res, next) {
+  console.log(err);
   res.status(err.status || 500).json({ error: 'Server error.' });
 });
 

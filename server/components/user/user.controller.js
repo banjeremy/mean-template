@@ -3,8 +3,9 @@
 var User = require('./user.model');
 
 exports.all = function(req, res) {
-  var users = User.all();
-  res.json(users);
+  User.all(function(err, users){
+    res.json(users);
+  });
 };
 
 exports.create = function(req, res) {

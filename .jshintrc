@@ -14,7 +14,7 @@
   "undef": true,
   "unused": "vars",
   "strict": true,
-
+  "expr": true,
   "esnext": true,
   "node": true,
   "devel": true,

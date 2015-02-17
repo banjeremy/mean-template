@@ -1,15 +1,26 @@
 'use strict';
 
-var User = function(user){
-  this.name = user.name;
-  this.email = user.email;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var userSchema = new Schema({
+  firstName: String,
+  lastName:  String,
+  email:     String
+});
+
+/*
+ * Statics
+ */
+userSchema.statics.findByEmail = function(email, cb) {
+  this.findOne({email: email}, cb);
 };
 
-User.all = function() {
-  return [
-    new User({name: 'Kayla', email: 'kjones@gmail.com'}),
-    new User({name: 'Jeremy', email: 'jjones@gmail.com'})
-  ];
+/*
+ * Instance Methods
+ */
+userSchema.methods.name = function(cb) {
+  return this.firstName + ' ' + this.lastName;
 };
 
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);
